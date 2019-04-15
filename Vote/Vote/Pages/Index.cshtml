@@ -1,0 +1,21 @@
+﻿@page
+@model IndexModel
+@{
+    ViewData["Title"] = "Home page";
+}
+
+<h3>Show All Members</h3>
+
+<table class="table">
+    <tbody>
+        @foreach (var item in Model.VarForMemberList)
+        {
+            <tr>
+                <td><b>Member Name</b></td>
+                <td>: @item.MemberName</td>
+                <td><b>Member ID</b></td>
+                <td>: @item.MemberID </td>
+            </tr>
+        }
+    </tbody>
+</table>
